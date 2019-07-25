@@ -23,6 +23,6 @@ class OffsetTest < Minitest::Test
 
   def split
     expected = {a: 7, b: 4, c: 8, d: 9}
-    assert_equal expected, @offset.split
-  end 
+    assert_equal expected, @offset.split_offsets
+  end
 end
