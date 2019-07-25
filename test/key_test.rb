@@ -14,7 +14,7 @@ class KeyTest < Minitest::Test
   end
 
   def test_split_into_four
-    expected = {a_key: 35, b_key: 51, c_key: 17, d_key: 71}
+    expected = {a: 35, b: 51, c: 17, d: 71}
     assert_equal expected, @key.split
   end
 end
