@@ -15,5 +15,6 @@ class Enigma
   end
 
   def encrypt(message, key = random_key, date = today)
+    
   end
 end
