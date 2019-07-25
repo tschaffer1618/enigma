@@ -2,8 +2,8 @@ require './test/test_helper'
 
 class ShiftTest < Minitest::Test
   def setup
-    @key = Key.new(35171)
-    @offset = Offset.new(220817)
+    @key = Key.new("35171")
+    @offset = Offset.new("220817")
     @shift = Shift.new(@key, @offset)
   end
 

@@ -2,7 +2,7 @@ require './test/test_helper'
 
 class KeyTest < Minitest::Test
   def setup
-    @key = Key.new(35171)
+    @key = Key.new("35171")
   end
 
   def test_it_exists
@@ -10,7 +10,7 @@ class KeyTest < Minitest::Test
   end
 
   def test_attributes
-    assert_equal 35171, @key.number
+    assert_equal "35171", @key.number_string
   end
 
   def test_split_into_four

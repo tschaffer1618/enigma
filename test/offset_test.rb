@@ -2,7 +2,7 @@ require './test/test_helper'
 
 class OffsetTest < Minitest::Test
   def setup
-    @offset = Offset.new(220817)
+    @offset = Offset.new("220817")
   end
 
   def test_it_exists
@@ -10,7 +10,7 @@ class OffsetTest < Minitest::Test
   end
 
   def test_attributes
-    assert_equal 220817, @offset.number
+    assert_equal "220817", @offset.date_string
   end
 
   def test_square
@@ -18,7 +18,7 @@ class OffsetTest < Minitest::Test
   end
 
   def test_last_four_digits
-    assert_equal 7489, @offset.last_four_digits
+    assert_equal "7489", @offset.last_four_digits
   end
 
   def split
