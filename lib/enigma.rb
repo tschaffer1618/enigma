@@ -2,8 +2,8 @@ require 'date'
 
 class Enigma
 
-  def random_key
-    ('%005d' % rand(10 ** 5)).to_i
+  def random_number_string
+    ('%005d' % rand(10 ** 5))
   end
 
   def today
@@ -11,10 +11,10 @@ class Enigma
     day = ('%002d' % date.mday).to_s
     month = ('%002d' % date.mon).to_s
     year = date.year.to_s[2..3]
-    (day + month + year).to_i
+    day + month + year
   end
 
-  def encrypt(message, key = random_key, date = today)
-    
+  def encrypt(message, number_string = random_key, date_string = today)
+
   end
 end

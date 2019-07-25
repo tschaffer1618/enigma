@@ -7,8 +7,8 @@ class Shift
   end
 
   def split_shifts
-    @key.split_keys.merge(@offset.split_offsets) do |letter, key, offset|
-      key + offset
+    @key.split_keys.merge(@offset.split_offsets) do |letter, key_number, offset_number|
+      key_number + offset_number
     end
   end
 end
