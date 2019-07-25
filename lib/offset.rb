@@ -13,7 +13,7 @@ class Offset
     square.to_s[-4..-1].to_i
   end
 
-  def split
+  def split_offsets
     { a: last_four_digits.to_s[0].to_i,
       b: last_four_digits.to_s[1].to_i,
       c: last_four_digits.to_s[2].to_i,
