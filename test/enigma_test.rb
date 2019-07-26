@@ -6,6 +6,7 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_it_exists
+    binding.pry
     assert_instance_of Enigma, @enigma
   end
 
@@ -17,5 +18,10 @@ class EnigmaTest < Minitest::Test
   def test_today
     assert_instance_of String, @enigma.today
     assert_equal 6, @enigma.today.length
+  end
+
+  def test_encrypt
+    expected = {:encryption=>"keder ohulw", :key=>"02715", :date=>"040895"}
+    assert_equal expected, @enigma.encrypt("hello world", "02715", "040895")
   end
 end
