@@ -1,12 +1,7 @@
 require 'date'
 
 class Enigma
-  attr_reader :characters
-
-  def initialize
-    @characters = ("a".."z").to_a << " "
-  end
-
+  
   def random_number_string
     ('%005d' % rand(10 ** 5))
   end
