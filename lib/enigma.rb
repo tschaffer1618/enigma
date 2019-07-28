@@ -11,4 +11,13 @@ class Enigma
     message = Message.new(message_string)
     {encryption: message.apply_shift(shift), key: number_string, date: date_string}
   end
+
+  def decrypt(message_string, number_string, date_string = today)
+    key = Key.new(number_string)
+    offset = Offset.new(date_string)
+    shift = Shift.new(key, offset)
+    message = Message.new(message_string)
+    {decryption: message.remove_shift(shift), key: number_string, date: date_string}
+  end
+
 end
