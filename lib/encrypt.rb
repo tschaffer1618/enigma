@@ -15,7 +15,7 @@ encryption = enigma.encrypt(incoming_text.chomp)
 
 writer = File.open(ARGV[1], "w")
 
-writer.write(encryption)
+writer.write(encryption[:encryption])
 
 writer.close
 
