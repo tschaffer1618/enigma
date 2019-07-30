@@ -19,6 +19,12 @@ class EnigmaTest < Minitest::Test
     assert_equal 6, @enigma.today.length
   end
 
+  def test_all_possible_key_strings
+    assert_equal 100000, @enigma.all_possible_key_strings.size
+    assert_equal "00000", @enigma.all_possible_key_strings.first
+    assert_equal "99999", @enigma.all_possible_key_strings.last
+  end 
+
   def test_encrypt
     expected = {:encryption=>"keder ohulw", :key=>"02715", :date=>"040895"}
     assert_equal expected, @enigma.encrypt("hello world", "02715", "040895")
